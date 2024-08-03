@@ -4,7 +4,8 @@ include 'db.php';
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $name = $_POST['name'];
     $email = $_POST['email'];
-    $password = $_POST['password'];
+    $password = password_hash($_POST['password'], PASSWORD_DEFAULT);
+    // $password = $_POST['password'];
     $sql = "INSERT INTO users (name, email, password) VALUES (:name, :email, :password)";
     $stmt = $conn->prepare($sql);
     $stmt->bindParam(':name', $name);
