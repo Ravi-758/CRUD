@@ -70,7 +70,9 @@
 <form method="post" action="">
     Name: <input type="text" name="name">
     Email: <input type="text" name="email">
+    Password: <input type="password" name="password" required>
     <input type="submit" value="Submit">
+    
 </form>
 
 </body>
