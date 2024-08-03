@@ -4,12 +4,12 @@ include 'db.php';
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $name = $_POST['name'];
     $email = $_POST['email'];
-
-    $sql = "INSERT INTO users (name, email) VALUES (:name, :email)";
+    $password = $_POST['password'];
+    $sql = "INSERT INTO users (name, email, password) VALUES (:name, :email, :password)";
     $stmt = $conn->prepare($sql);
     $stmt->bindParam(':name', $name);
     $stmt->bindParam(':email', $email);
-
+    $stmt->bindParam(':password',$password);
     if ($stmt->execute()) {
         echo "New record created successfully";
     } else {
