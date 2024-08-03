@@ -9,8 +9,10 @@
     <link rel="stylesheet" href="./assets/css/bootstrap.min.css">    
 </head>
 <body>
-    
-    hi
+    <?php 
+    include('./controller/addController.php'); 
+
+    ?>
 
 </body>
 </html>
