@@ -9,9 +9,19 @@
     <link rel="stylesheet" href="./assets/css/bootstrap.min.css">    
 </head>
 <body>
-    <?php 
-    include('./controller/addController.php'); 
+    <a id="add" href="./controller/addController" >add controller</a>
 
+    <a id="read"  href="readController">read controller</a>
+    <?php 
+    
+        include('./controller/addController.php'); 
+    
+
+    include('./controller/readController.php');
+
+    echo 'ehlo';
+
+   
     ?>
 
 </body>
