@@ -22,6 +22,9 @@
     echo 'ehlo';
 
    
+    include('./controller/addController.php'); 
+    include './controller/deleteController.php';
+
     ?>
 
 </body>
